@@ -1,0 +1,98 @@
+html{
+    display: grid;
+    justify-content: center;
+    background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+body{
+    margin-top: 40px;
+    display: flex;
+    border: 2px solid #d16ba5;
+    height: 600px;
+    width: 600px;
+    justify-content: space-around;
+    align-items: center;
+    background: #79b3f4;
+    
+}
+.draggable-elements{
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    justify-content: space-between;
+}
+.draggable{
+    font-size: 50px;
+    cursor: move;
+    transition: opacity 0.2s;
+}
+.draggable:hover {
+    opacity: 0.5;
+  }
+.droppable-elements{
+    display: grid;
+    width: 400px;
+    height: 400px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.droppable{
+    border: dashed #d16ba5;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    background-color: #fff;
+}
+.droppable span {
+    font-size: 20px;
+    pointer-events: none; 
+}
+
+/*drag & drop*/
+.droppable-hover {
+    background-color: #bee3f0;
+    transform: scale(1.1);
+}
+.dropped {
+    /*background*/
+    border-style: solid;
+    color: #fff;
+    font-size: 50px;
+}
+.dropped i {
+    pointer-events: none;
+}
+.dragged {
+    user-select: none;
+    opacity: 0.1;
+    cursor: default;
+}
+
+
+#play-again-btn {
+    position: absolute;
+    top: 660px;
+    left: 50%;
+    margin-left: -50px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #111;
+    border: 5px double #fff; 
+    border-radius: 14px;
+    padding: 8px 10px;  
+    outline: none;
+    letter-spacing: .05em;
+    cursor: pointer;
+    display:none;
+    opacity: 1;
+    transition: opacity 0.5s, transform 0.5s, background-color 0.2s;
+  }
+  #play-again-btn:hover {
+    background-color: #333;
+  }
+  #play-again-btn:active {
+    background-color: #555;
+  }
